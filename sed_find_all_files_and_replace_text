@@ -1,0 +1,1 @@
+find . -type f -name "*.yaml" | xargs sed -i "s/WhatToFind/WithWhatToReplace/g"
