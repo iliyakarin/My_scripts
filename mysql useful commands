@@ -1,0 +1,6 @@
+# Count and show number of connections to mysql with hosts
+mysql -u username -p passwd -e "show processlist;"|awk '{print $3}'|awk -F":" '{print $1}'|sort|uniq -c
+
+# Same as previous but little different output
+mysql -u username -p password -BNe "select host,count(host) from processlist group by host;" information_schema
+
