@@ -1,0 +1,6 @@
+db.getMongo().getDBNames().forEach(
+    function(databaseName) {
+      if (databaseName.match(/VAR/i))
+        print(databaseName);
+    }
+  );
