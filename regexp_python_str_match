@@ -1,0 +1,2 @@
+# Match input to worksheet name in google spreadsheets document.
+matching = [s for s in worksheet_list if category.lower() in str(s).lower() and (re.search("'(.+?)'", str(s)).group(0)).replace("'", "") == str(category)]
