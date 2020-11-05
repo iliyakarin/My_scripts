@@ -1,0 +1,6 @@
+#/bin/bash
+
+curl -u admin:admin123 -X PUT -v -include -F package=@PACKAGE-NAME http://localhost:8081/repository/nuget-hosted/
+
+
+#for i in *; do curl -u admin:admin123 -X PUT -v -include -F package=@$i http://localhost:8081/repository/nuget-hosted/; done
