@@ -1,0 +1,16 @@
+# Windows
+nslookup 
+set types=all
+_ldap._tcp
+
+or in one line
+nslookup -type=all _ldap._tcp
+
+or
+nltest /dclist:yourdomain.com
+
+
+
+
+# Linux
+nslookup -type=srv _ldap._tcp.DOMAINNAME
