@@ -6,3 +6,6 @@ ffmpeg -i input.mkv -c copy -map 0 output.mp4
 
 # Convert mkv to mp4 join 1st and 2nd audio streams to one
 ffmpeg -i '2021-04-04_20-26-38.mkv' -filter_complex '[0:a:0]amerge=inputs=2[a]' -map '0:v:0' -map '[a]' -c:v copy -c:a libmp3lame -q:a 3 -ac 2 'output2.mp4'
+
+# Convert mkv to mp4 join 1st video stream and 4th audio stream to one video file
+ffmpeg -i "Source.mkv" -c:v libx264 -c:a ac3 -crf 20 -map 0:0 -map 0:4 "out.mp4"
